@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# CS490 Webstore
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+`Webstore` is an online shopping application developed by group of K students.
 
-## Available Scripts
+This repo is dedicated to building the app in ReactJS.
 
-In the project directory, you can run:
+## Toolchain
 
-### `npm start`
+| Tool | Version    |
+| ---- | ---------- |
+| Node | `^14.17.1` |
+| Yarn | `^1.22.17` |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Install Node version `^14.17.1`.
+2. Run `yarn` or `npm install` to install dependencies.
+3. Run `yarn start` to start the app locally.
 
-### `npm test`
+### Project Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. The website will allow registered users to browse a catalog with a brief variety of products
+   a. Available number of units in stock.
+   b. Price, weight, dimension and some other description specific to the item.
+   c. A picture of the item.
+   d. Shopping cart
 
-### `npm run build`
+2. Each new registered user will receive a gift card of ¤500 (five hundred webcoins). Each time a user checkout the items in their cart, the amount to be payed will be deducted from the gift card. A user with insufficient funds can't finish the checkout process.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. If a user wants an item quantity that is bigger than the available number of units in stock, deny it.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Items displayed in the Catalog Page should have the options to view it (which will open a Product Page with more details about the item), add to favorite list, and add to cart (which will add 1 unit of the product to the shopping cart). The items should display its name as well as its price, the units available, and the user rating.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. The Catalog Page should have a side navigation section with options to filter items by: price, popularity, and product specific filters (such as `book genre` for an online book store, etc.)
 
-### `npm run eject`
+6. The Product Page should have a thorough description of the specific item, option to choose the number of units to be added to the cart, as well as a Product Review section with options for the users to rate the product from 0 (worthless) to 5 (excellent). These ratings will be displayed as part of the product description. The Product Review section will also allow to answer a "would buy again?" question and display the number of users that answered yes and no, respectively.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+7. In your Catalog Page, if there are not units available of a particular product, display it as "sold out" (always display the products).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+8. Your website should have a `Landing Page` with the options to register and/or login, as well as a brief description of the products you are selling.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+9. The user's `Home Page` should have a history of previous purchases, their favorite items list, and the items in the saved cart.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+10. Allow a user to be able to reload their webcoin gift card once every 24 hours from `My Account` page.
 
-## Learn More
+### Development
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. When you are making changes, make sure to checkout out a new branch using `git checkout -b "you-branch-name"` and push it to the repo using `git add .`, `git commit -m "descriptive comment about the changes"`, `git push -u origin head`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Once you push the changes, create a pull request using Github dashboard to be reviewed.
