@@ -45,6 +45,10 @@ This repo is dedicated to building the app in ReactJS.
 
 ### Development
 
-1. When you are making changes, make sure to checkout out a new branch using `git checkout -b "you-branch-name"` and push it to the repo using `git add .`, `git commit -m "descriptive comment about the changes"`, `git push -u origin head`.
+1. When you are making changes, make sure to checkout out a new branch using
+   `git checkout -b "you-branch-name"` and push it to the repo using
+   `git add .`,
+   `git commit -m "descriptive comment about the changes"`,
+   `git push -u origin head`.
 
 2. Once you push the changes, create a pull request using Github dashboard to be reviewed.
