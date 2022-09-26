@@ -1,6 +1,7 @@
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { addProduct, deleteProduct, updateProduct } from "./ProductSlice";
 import { useState } from "react";
+import { Box, Button } from "@mui/material";
 
 export const Product = () => {
   const productList = useAppSelector((state) => state.product.value);
@@ -11,7 +12,7 @@ export const Product = () => {
 
   return (
     <>
-      <div className="addProduct">
+      <Box className="addProduct">
         <input
           type="text"
           placeholder="item_name "
@@ -26,7 +27,8 @@ export const Product = () => {
             setCategory(event.target.value);
           }}
         />
-        <button
+        <Button
+          variant="contained"
           onClick={() => {
             dispatch(
               addProduct({ id: productList.length + 1, name, category })
@@ -34,12 +36,12 @@ export const Product = () => {
           }}
         >
           Add Item
-        </button>
-      </div>
-      <div className="displayProduct">
+        </Button>
+      </Box>
+      <Box className="displayProduct">
         {productList.map((item) => {
           return (
-            <div>
+            <Box>
               <h1>{item.name}</h1>
               <h2>{item.category}</h2>
               <h2>{item.id}</h2>
@@ -50,7 +52,8 @@ export const Product = () => {
                   setNewName(event.target.value);
                 }}
               />
-              <button
+              <Button
+                variant="contained"
                 onClick={() => {
                   dispatch(
                     updateProduct({
@@ -60,19 +63,20 @@ export const Product = () => {
                   );
                 }}
               >
-                Update Item Name
-              </button>
-              <button
+                Update
+              </Button>
+              <Button
+                variant="contained"
                 onClick={() => {
                   dispatch(deleteProduct({ id: item.id }));
                 }}
               >
-                Delete Item
-              </button>
-            </div>
+                Delete
+              </Button>
+            </Box>
           );
         })}
-      </div>
+      </Box>
     </>
   );
 };
