@@ -14,6 +14,14 @@
   margin-top: 20px;
 }
 
+.addProduct {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 .displayProduct div {
   width: 400px;
   height: 150px;
@@ -22,4 +30,5 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+  background-color: orange;
 }

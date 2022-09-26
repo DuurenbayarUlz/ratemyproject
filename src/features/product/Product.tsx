@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { addProduct, deleteProduct, updateProduct } from "./ProductSlice";
 import { useState } from "react";
-import { Box, Button } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 
 export const Product = () => {
   const productList = useAppSelector((state) => state.product.value);
@@ -13,16 +13,18 @@ export const Product = () => {
   return (
     <>
       <Box className="addProduct">
-        <input
-          type="text"
-          placeholder="item_name "
+        <TextField
+          id="outlined-basic"
+          label="Item_name"
+          variant="outlined"
           onChange={(event) => {
             setName(event.target.value);
           }}
         />
-        <input
-          type="text"
-          placeholder="category "
+        <TextField
+          id="outlined-basic"
+          label="category"
+          variant="outlined"
           onChange={(event) => {
             setCategory(event.target.value);
           }}
@@ -52,8 +54,10 @@ export const Product = () => {
                   setNewName(event.target.value);
                 }}
               />
+
               <Button
                 variant="contained"
+                size="small"
                 onClick={() => {
                   dispatch(
                     updateProduct({
@@ -67,6 +71,7 @@ export const Product = () => {
               </Button>
               <Button
                 variant="contained"
+                size="small"
                 onClick={() => {
                   dispatch(deleteProduct({ id: item.id }));
                 }}
