@@ -45,6 +45,8 @@ This repo is dedicated to building the app in ReactJS.
 
 ### Development
 
+## npm run start / yarn start to start the app locally
+
 1. When you are making changes, make sure to checkout out a new branch and push it to the repo using
 
 <ul>
