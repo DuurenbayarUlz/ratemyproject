@@ -54,4 +54,5 @@ This repo is dedicated to building the app in ReactJS.
    <li>git push -u origin head</li>
 </ul>
 
-2. Once you push the changes, create a pull request using Github dashboard to be reviewed.
+2. Push the changes to the repo 
+3. Create a pull request using Github dashboard
