@@ -15,7 +15,7 @@ This repo is dedicated to building the app in ReactJS.
 
 1. Install Node version `^14.17.1`.
 2. Run `yarn` or `npm install` to install dependencies.
-3. Run `yarn start` to start the app locally.
+3. Run `yarn start` or `npm run start` to start the app locally.
 
 ### Project Description
 
@@ -44,8 +44,6 @@ This repo is dedicated to building the app in ReactJS.
 10. Allow a user to be able to reload their webcoin gift card once every 24 hours from `My Account` page.
 
 ### Development
-
-## npm run start / yarn start to start the app locally
 
 1. When you are making changes, make sure to checkout out a new branch and push it to the repo using
 
