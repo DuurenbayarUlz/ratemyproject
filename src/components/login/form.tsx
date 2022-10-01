@@ -1,6 +1,9 @@
 import { Box, Button, TextField } from "@mui/material";
+import { useState } from "react";
 
 export const LogInForm = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <Box
       display="flex"
@@ -14,10 +17,30 @@ export const LogInForm = () => {
       paddingX="50px"
       marginTop="20px"
     >
-      <TextField variant="standard" label="Email" />
-      <TextField variant="standard" label="Password" />
+      <TextField
+        variant="standard"
+        label="Email"
+        onChange={(event) => {
+          setEmail(event.target.value);
+        }}
+      />
+      <TextField
+        variant="standard"
+        label="Password"
+        onChange={(event) => {
+          setPassword(event.target.value);
+        }}
+      />
       <Box marginTop="20px">
-        <Button variant="contained">Log In</Button>
+        <Button
+          variant="contained"
+          fullWidth
+          onClick={() => {
+            console.log(email, password);
+          }}
+        >
+          Log In
+        </Button>
       </Box>
     </Box>
   );
