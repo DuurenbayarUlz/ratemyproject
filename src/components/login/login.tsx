@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { LogInForm } from "./form";
 
@@ -11,16 +11,21 @@ export const Login = () => {
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
-      bgcolor="orange"
+      sx={{
+        background: "linear-gradient(to right bottom, #EC9F05, #FF4E00)",
+      }}
     >
-      <h1>This is the login page</h1>
-      <div>
-        <Link to="/signup">Click to view signup page</Link>
-      </div>
-      <div>
-        <Link to="/">Click to view home page</Link>
-      </div>
+      <Typography variant="h5">Login to our webstore</Typography>
       <LogInForm />
+      <Box display="flex" width="200px" justifyContent="space-between">
+        <Link to="/signup">
+          <Typography>signup page</Typography>
+        </Link>
+
+        <Link to="/">
+          <Typography> home page</Typography>
+        </Link>
+      </Box>
     </Box>
   );
 };

@@ -1,4 +1,4 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
 export const SignUpForm = () => {
@@ -10,54 +10,74 @@ export const SignUpForm = () => {
   return (
     <Box
       display="flex"
-      maxWidth="400px"
-      height="50vh"
+      maxWidth="500px"
+      minHeight="400px"
       borderRadius={3}
       flexDirection="column"
       bgcolor="white"
-      justifyContent="center"
+      justifyContent="space-evenly"
       alignItems="center"
       paddingX="50px"
       marginTop="20px"
     >
-      <TextField
-        variant="standard"
-        label="First Name"
-        onChange={(event) => {
-          setFirstName(event.target.value);
-        }}
-      />
-      <TextField
-        variant="standard"
-        label="Last Name"
-        onChange={(event) => {
-          setLastName(event.target.value);
-        }}
-      />
-      <TextField
-        variant="standard"
-        label="Email"
-        onChange={(event) => {
-          setEmail(event.target.value);
-        }}
-      />
-      <TextField
-        variant="standard"
-        label="Password"
-        onChange={(event) => {
-          setPassword(event.target.value);
-        }}
-      />
       <Box marginTop="20px">
-        <Button
-          fullWidth
-          variant="contained"
-          onClick={() => {
-            console.log(firstName, lastName, email, password);
+        <Typography variant="h5">CS490 Webstore</Typography>
+      </Box>
+      <Box display="flex" flexDirection="column">
+        <TextField
+          variant="standard"
+          label="First Name"
+          onChange={(event) => {
+            setFirstName(event.target.value);
           }}
-        >
-          Sign Up
-        </Button>
+          value={firstName}
+        />
+        <TextField
+          variant="standard"
+          label="Last Name"
+          onChange={(event) => {
+            setLastName(event.target.value);
+          }}
+          value={lastName}
+        />
+        <TextField
+          variant="standard"
+          label="Email"
+          onChange={(event) => {
+            setEmail(event.target.value);
+          }}
+          value={email}
+        />
+        <TextField
+          variant="standard"
+          label="Password"
+          onChange={(event) => {
+            setPassword(event.target.value);
+          }}
+          value={password}
+        />
+        <Box marginTop="20px">
+          <Button
+            disabled={
+              firstName.length === 0 ||
+              lastName.length === 0 ||
+              email.length === 0 ||
+              password.length === 0
+            }
+            fullWidth
+            variant="contained"
+            onClick={(e) => {
+              e.preventDefault();
+              console.log(firstName, lastName, email, password);
+              setFirstName("");
+              setLastName("");
+              setPassword("");
+              setEmail("");
+            }}
+          >
+            Sign Up
+          </Button>
+        </Box>
       </Box>
     </Box>
   );
