@@ -1,4 +1,4 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
 export const LogInForm = () => {
@@ -8,39 +8,51 @@ export const LogInForm = () => {
     <Box
       display="flex"
       maxWidth="500px"
-      height="50vh"
       borderRadius={3}
       flexDirection="column"
       bgcolor="white"
-      justifyContent="center"
       alignItems="center"
+      justifyContent="space-evenly"
       paddingX="50px"
       marginTop="20px"
+      minHeight="320px"
     >
-      <TextField
-        variant="standard"
-        label="Email"
-        onChange={(event) => {
-          setEmail(event.target.value);
-        }}
-      />
-      <TextField
-        variant="standard"
-        label="Password"
-        onChange={(event) => {
-          setPassword(event.target.value);
-        }}
-      />
       <Box marginTop="20px">
-        <Button
-          variant="contained"
-          fullWidth
-          onClick={() => {
-            console.log(email, password);
+        <Typography variant="h5">CS490 Webstore</Typography>
+      </Box>
+
+      <Box display="flex" flexDirection="column">
+        <TextField
+          variant="standard"
+          label="Email"
+          onChange={(event) => {
+            setEmail(event.target.value);
           }}
-        >
-          Log In
-        </Button>
+          value={email}
+        />
+        <TextField
+          variant="standard"
+          label="Password"
+          onChange={(event) => {
+            setPassword(event.target.value);
+          }}
+          value={password}
+        />
+        <Box marginTop="20px">
+          <Button
+            disabled={email.length === 0 || password.length === 0}
+            variant="contained"
+            fullWidth
+            onClick={(e) => {
+              e.preventDefault();
+              console.log(email, password);
+              setEmail("");
+              setPassword("");
+            }}
+          >
+            Log In
+          </Button>
+        </Box>
       </Box>
     </Box>
   );
