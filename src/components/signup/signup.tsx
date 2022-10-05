@@ -15,7 +15,7 @@ export const Signup = () => {
         background: "linear-gradient(to right bottom, #EC9F05, #FF4E00)",
       }}
     >
-      <Typography variant="h5">Signup to our webstore</Typography>
+      <Typography variant="h5">Signup to our site</Typography>
       <SignUpForm />
       <Box display="flex" width="200px" justifyContent="space-between">
         <Link to="/">

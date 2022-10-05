@@ -15,14 +15,11 @@ export const SignUpForm = () => {
       borderRadius={3}
       flexDirection="column"
       bgcolor="white"
-      justifyContent="space-evenly"
+      justifyContent="center"
       alignItems="center"
       paddingX="50px"
       marginTop="20px"
     >
-      <Box marginTop="20px">
-        <Typography variant="h5">CS490 Webstore</Typography>
-      </Box>
       <Box display="flex" flexDirection="column">
         <TextField
           variant="standard"

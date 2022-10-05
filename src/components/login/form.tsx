@@ -12,15 +12,11 @@ export const LogInForm = () => {
       flexDirection="column"
       bgcolor="white"
       alignItems="center"
-      justifyContent="space-evenly"
+      justifyContent="center"
       paddingX="50px"
       marginTop="20px"
       minHeight="320px"
     >
-      <Box marginTop="20px">
-        <Typography variant="h5">CS490 Webstore</Typography>
-      </Box>
-
       <Box display="flex" flexDirection="column">
         <TextField
           variant="standard"
