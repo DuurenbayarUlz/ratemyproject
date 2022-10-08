@@ -30,5 +30,5 @@ Still in progress...
    <li>git push -u origin head</li>
 </ul>
 
-2. Push the changes to the repo
+2. Push the changes to the repo.
 3. Create a pull request using Github dashboard
